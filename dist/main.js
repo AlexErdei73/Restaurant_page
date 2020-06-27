@@ -90,10 +90,23 @@
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("alert('Hello World!');\n\n//# sourceURL=webpack:///./src/index.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _loadHomePage_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./loadHomePage.js */ \"./src/loadHomePage.js\");\n\n\nObject(_loadHomePage_js__WEBPACK_IMPORTED_MODULE_0__[\"loadHomePage\"])();\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/loadHomePage.js":
+/*!*****************************!*\
+  !*** ./src/loadHomePage.js ***!
+  \*****************************/
+/*! exports provided: loadHomePage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"loadHomePage\", function() { return loadHomePage; });\nfunction loadHomePage() {\n    const content = document.querySelector('#content');\n    const h1 = document.createElement('h1');\n    const div = document.createElement('div');\n    const p = document.createElement('p');\n    const img = document.createElement('img');\n    h1.textContent = 'Alex\\'s Restaurant';\n    p.textContent = 'Come and indulge yourself with our delicious food!';\n    img.setAttribute('src','../restaurant-hero.jpg/');\n    img.setAttribute('alt','a nice dish on the table');\n    /*img.setAttribute('width','90%');*/\n    content.style = 'width: 100%;' +\n                    'border: 2px solid #3b3b3b;';\n    h1.style =  'margin-left: 10%';\n    div.style = 'width: 80%;' +\n                'margin: auto;' +\n                'background-color: #1f1f1f;' +\n                'color: white;' +\n                'text-align: center;' +\n                'border: none;';\n    p.style =   'width: 45%;' +\n                'padding: 3% 0;' +\n                'margin: auto;' +\n                'font-size: large;';\n    img.style = 'display: block;' +\n                'width: 80%;' +\n                'margin: 10% auto;' +\n                'margin-top: 0;';\n    content.appendChild(h1);\n    div.appendChild(p);\n    content.appendChild(div);\n    content.appendChild(img);\n}\n\n\n\n//# sourceURL=webpack:///./src/loadHomePage.js?");
 
 /***/ })
 
