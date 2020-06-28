@@ -1,3 +1,4 @@
-import { loadHomePage } from './loadHomePage.js';
+import { loadMenuBar, loadHomePage } from './loadHomePage.js';
 
+loadMenuBar();
 loadHomePage();
