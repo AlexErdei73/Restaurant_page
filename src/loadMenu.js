@@ -196,7 +196,7 @@ function loadMenu(){
     const p = document.createElement('p');
     p.textContent = 'Food to make you happy';
     divTitle.style = 'width: 100%;' +
-                     'background-color: #1f1f1f;' +
+                     'background-color: rgb(133, 9, 36);' +
                      'color: white;' +
                      'text-align: center;' +
                      'border: none;';
@@ -206,7 +206,7 @@ function loadMenu(){
                 'font-size: large;';
     center.style =  'width: 80%;' +
                     'margin: auto;' + 
-                    'border: 1px solid #1f1f1f;';
+                    'border: 1px solid darkred;';
     divTitle.appendChild(p);
     center.appendChild(divTitle);
     populateMenu(starters, 'Starters & sandwiches');
@@ -277,13 +277,14 @@ function showTitle(title){
     h2.style = 'display: block;' +
                'width: 40%;' +
                'margin: 3% auto;' +
-               'text-align: center;';
+               'text-align: center;' +
+               'color: darkred;';
     divDecor1.style = 'width: 90%;' +
                       'margin: 1px auto;' +
-                      'border: 1px solid #1f1f1f;';
+                      'border: 1px solid darkred;';
     divDecor2.style = 'width: 90%;' +
                       'margin: 1px auto;' +
-                      'border: 1px solid #1f1f1f;';
+                      'border: 1px solid darkred;';
     center.appendChild(divDecor1);
     center.appendChild(h2);
     center.appendChild(divDecor2);
