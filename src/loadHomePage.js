@@ -52,7 +52,7 @@ function loadHomePage() {
     p.textContent = 'Come and indulge yourself with our delicious food!';
     button.textContent = 'BOOK NOW!';
     button.setAttribute('id','button');
-    img.setAttribute('src','./restaurant-hero.jpg');
+    img.setAttribute('src','./hero.jpg');
     img.setAttribute('alt','a nice dish on the table');
     div.style = 'width: 100%;' +
                 'height: 180px;' +
