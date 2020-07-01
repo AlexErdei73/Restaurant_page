@@ -14,7 +14,7 @@ function loadContact(){
                 'padding: 3% 0;' +
                 'margin: auto;';
     const phoneIcon = document.createElement('img');
-    phoneIcon.setAttribute('src', '../index.png');
+    phoneIcon.setAttribute('src', './index.png');
     phoneIcon.setAttribute('width','50px');
     phoneIcon.style = 'float: left;' +
                       'clear: both;';
@@ -32,7 +32,7 @@ function loadContact(){
     container.appendChild(phoneIcon);
     container.appendChild(phoneNumber);                  
     const mailIcon = document.createElement('img');
-    mailIcon.setAttribute('src', '../mail.jpg');
+    mailIcon.setAttribute('src', './mail.jpg');
     mailIcon.setAttribute('width','50px');
     mailIcon.style = 'float: left;' + 
                      'clear: both;';
@@ -47,12 +47,18 @@ function loadContact(){
     containerMail.style = 'width: 40%;' +
                           'height: 50px;' +
                           'margin: 20px auto;';
+    const img = document.createElement('img');
+    img.setAttribute('src','./dessert.jpeg');
+    img.setAttribute('alt','Nice dessert');
+    img.style = 'display: block;' +
+                'width: 100%;';
     containerMail.appendChild(mailIcon);
     containerMail.appendChild(mail);                 
     div.appendChild(h2);
     div.appendChild(container);
     div.appendChild(containerMail);
     center.appendChild(div);
+    center.appendChild(img);
 }
 
 export { loadContact }
