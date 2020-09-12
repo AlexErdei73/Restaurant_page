@@ -36,13 +36,15 @@ function loadContact(){
     mailIcon.setAttribute('width','50px');
     mailIcon.style = 'float: left;' + 
                      'clear: both;';
-    const mail = document.createElement('div');
+    const mail = document.createElement('a');
     mail.textContent = 'mralexerdei@yahoo.co.uk';
+    mail.setAttribute('href','mailto: mralexerdei@yahoo.co.uk');
     mail.style = 'height: 50px;' +
                  'line-height: 50px;' +
                  'text-align: center;' +
                  'font-size: x-large;' + 
-                 'float: right;';
+                 'float: right;' + 
+                 'color: white;';
     const containerMail = document.createElement('div');
     containerMail.style = 'width: 40%;' +
                           'height: 50px;' +
