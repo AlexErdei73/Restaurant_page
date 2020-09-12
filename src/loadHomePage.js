@@ -11,9 +11,12 @@ function loadMenuBar() {
     const ul = document.createElement('ul');
     let li = [];
     let listItem;
+    let aElement;
     for (let i = 0; i < 3; i++){
         listItem = document.createElement('li');
-        listItem.textContent = menu[i];
+        aElement = document.createElement('a');
+        aElement.textContent = menu[i];
+        listItem.appendChild(aElement);
         listItem.setAttribute('id',menu[i]);
         listItem.style = 'display: inline;' + 
                          'margin-left: 10%;' +
@@ -21,6 +24,10 @@ function loadMenuBar() {
                          'padding: 5%;' +
                          'padding-bottom: 12%;' +
                          'color: darkred;';
+        aElement.style = 'border-color: inherited;' +
+                         'color: inherited;' +
+                         'pointer-events: none;' +
+                         'user-select: none';
         ul.appendChild(listItem);
     }
     content.style = 'width: 100%;' +
