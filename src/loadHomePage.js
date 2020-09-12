@@ -35,7 +35,8 @@ function loadMenuBar() {
     menuBar.style = 'margin: 1% 0';
     h1.style =  'margin-left: 10%;' + 
                 'display: inline;' + 
-                'color: darkred;';
+                'color: darkred;' +
+                'user-select: none';
     ul.style =  'list-style-type: none;' +
                 'margin: 0;' +
                 'padding: 0;' +
