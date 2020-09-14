@@ -4,47 +4,49 @@ function loadMenuBar() {
     menuBar.setAttribute('id','menubar');
     const center = document.createElement('div');
     center.setAttribute('id','center');
-    const h1 = document.createElement('h1');
-    h1.textContent = 'Alex\'s Restaurant';
-    h1.setAttribute('id', 'logo');
+    const logo = document.createElement('button');
+    logo.textContent = 'Alex\'s Restaurant';
+    logo.setAttribute('id', 'logo');
     const menu = ['home','menu','contact'];
     const ul = document.createElement('ul');
     let li = [];
     let listItem;
-    let aElement;
+    let button;
     for (let i = 0; i < 3; i++){
         listItem = document.createElement('li');
-        aElement = document.createElement('a');
-        aElement.textContent = menu[i];
-        listItem.appendChild(aElement);
-        listItem.setAttribute('id',menu[i]);
-        listItem.style = 'display: inline;' + 
-                         'margin-left: 10%;' +
-                         'font-size: large;' +
-                         'padding: 5%;' +
-                         'padding-bottom: 12%;' +
-                         'color: darkred;';
-        aElement.style = 'border-color: inherited;' +
-                         'color: inherited;' +
-                         'pointer-events: none;' +
-                         'user-select: none';
+        button = document.createElement('button');
+        button.textContent = menu[i];
+        listItem.appendChild(button);
+        button.setAttribute('id',menu[i]);
+        listItem.style = 'display: inline';                     
+        button.style = 'display: inline;' + 
+                       'color: darkred;' +
+                       'width: 33%;' +
+                       'height: 2.7em;' +
+                       'font-size: large;' +
+                       'user-select: none;' +
+                       'text-align: center;' +
+                       'float: left';
         ul.appendChild(listItem);
     }
     content.style = 'width: 100%;' +
                     'border: 2px solid #3b3b3b3;';
     menuBar.style = 'margin: 1% 0';
-    h1.style =  'margin-left: 10%;' + 
-                'display: inline;' + 
-                'color: darkred;' +
-                'user-select: none';
+    logo.style =  'margin-left: 10%;' + 
+                  'display: inline;' + 
+                  'color: darkred;' +
+                  'user-select: none' +
+                  'background: white;' +
+                  'font-size: 2em';
     ul.style =  'list-style-type: none;' +
                 'margin: 0;' +
                 'padding: 0;' +
-                'margin-right: 17.1%;' +
+                'width: 20%;' +
+                'margin-right: 9.7%;' +
                 'margin-top: 0.6%;' +
                 'float: right;' + 
                 'clear: left;';
-    menuBar.appendChild(h1);
+    menuBar.appendChild(logo);
     menuBar.appendChild(ul);
     content.appendChild(menuBar);
     content.appendChild(center);

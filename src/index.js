@@ -5,22 +5,20 @@ import { loadContact } from './loadContact.js';
 loadMenuBar();
 loadHomePage();
 
-const li = document.querySelectorAll('li');
-const h1 = document.querySelector('h1');
+const buttons = document.querySelectorAll('button');
+const logo = document.querySelector('button');
 let button = document.querySelector('#button');
-console.log(button);
-li.forEach(function(item) {
+buttons.forEach(function(item) {
     item.addEventListener('click', onClick);
 });
-h1.addEventListener('click', onClick);
-button.addEventListener('click',onClick);
-button.addEventListener('mouseenter',onMouseEnter);
-button.addEventListener('mouseleave',onMouseLeave);
+button.addEventListener('mouseenter' ,onMouseEnter);
+button.addEventListener('mouseleave', onMouseLeave);
 
 function onClick(e){
-    const li = e.target;
-    styleMenu(li);
-    switch (li.id) {
+    const btn = e.target;
+    console.log('click');
+    styleMenu(btn);
+    switch (btn.id) {
         case 'logo':
             loadHomePage();
             styleButton();
@@ -68,15 +66,15 @@ function onMouseLeave(e) {
                     'margin: auto;';
 }
 
-function styleMenu(listItem) {
-    const li = document.querySelectorAll('li');
-    li.forEach(function(item){
+function styleMenu(menuItem) {
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(function(item){
         item.style.background = 'white';
         item.style.color = 'darkred';
     })
-    if (listItem.id != 'logo') {
-        listItem.style.background = 'rgb(133, 9, 36)';
-        listItem.style.color = 'white';
+    if (menuItem.id != 'logo') {
+        menuItem.style.background = 'rgb(133, 9, 36)';
+        menuItem.style.color = 'white';
     }
 }
 
